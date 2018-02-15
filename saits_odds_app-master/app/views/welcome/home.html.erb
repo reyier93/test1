@@ -1,0 +1,25 @@
+<h1>Premiere League Teams</h1>
+
+<table>
+    <tr>
+        <th>Hemmalag</th>
+        <th>Bortalag</th>
+        <th>Odds hemmavinst</th>
+        <th>Odds oavgjort</th>
+        <th>Odds bortavinst</th>
+    </tr>
+    
+<% @scheduledgames.each do |match|%>
+
+    <tr>
+         <td><%=match.hometeam%></td>
+         <td><%=match.awayteam%></td>
+         <td><%=match.homebet%></td>
+         <td><%=match.drawbet%></td>
+         <td><%=match.awaybet%></td>
+    </tr>
+    
+<%end%>
+</table>
+
+<h1><%= link_to "Scraping", scrape_home_path %></h1>
